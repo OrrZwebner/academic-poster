@@ -28,6 +28,25 @@ Open `REVIEW.md` in a Markdown preview (VS Code: Cmd+Shift+V) to see the crops.
 
 </details>
 
+## Contents
+
+- [Installation](#installation)
+  - [Option A — claude.ai, the Claude app or Cowork · no terminal](#option-a--claudeai-the-claude-app-or-cowork--no-terminal)
+  - [Option B — Claude Code, as a plugin](#option-b--claude-code-as-a-plugin)
+  - [Option C — Claude Code, as a standalone skill](#option-c--claude-code-as-a-standalone-skill)
+- [Connect Canva (optional)](#connect-canva-optional)
+- [Without Canva](#without-canva)
+- [How to handle PDFs and figures](#how-to-handle-pdfs-and-figures)
+- [What to put in your planning prompt](#what-to-put-in-your-planning-prompt)
+- [Pre-print review of an existing poster](#pre-print-review-of-an-existing-poster)
+- [Usage](#usage)
+- [What it checks that people miss](#what-it-checks-that-people-miss)
+- [Repository layout](#repository-layout)
+- [Scripts](#scripts)
+- [Requirements](#requirements)
+- [Scope](#scope)
+- [License](#license)
+
 ## Installation
 
 **There are three separate ways to install this. They are alternatives — pick the one that matches
@@ -313,3 +332,7 @@ requirements, or a phone scan of the QR on a printed proof. Font sizes, margin c
 viewing-distance models are rules of thumb, and the skill labels them as such. Canva's plans, menus
 and MCP behaviour, and Claude's connector UI, change over time. Verify the setup steps against the
 linked official pages.
+
+## License
+
+MIT © 2026 Orr Zwebner. See [LICENSE](LICENSE).
