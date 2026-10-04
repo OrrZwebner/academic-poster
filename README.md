@@ -1,43 +1,32 @@
 # academic-poster
 
-A Claude skill (and Claude Code plugin) that turns a research paper into a print-ready conference
-poster — built natively in Canva through the Canva MCP, or as an editable PowerPoint file without
-Canva — and runs a five-lens pre-print review on any existing poster.
+A Claude skill that turns your research paper into a print-ready conference poster, and checks
+any finished poster before you send it to print.
 
-## What it does
+| You give | You get |
+|---|---|
+| Your paper (PDF or LaTeX) + its figures | A poster built in Canva, or an editable PowerPoint if you don't use Canva |
+| A paragraph from the poster | 2–3 shorter, poster-readable versions that still say only what the paper says |
+| Any finished poster (PDF, PowerPoint, image or Canva link) | `REVIEW.md`: a summary, then each problem with a crop of the poster and a suggested fix |
 
-A poster made from a paper fails in predictable ways. The text drifts away from what the paper
-claims. Figures that looked fine in a PDF print at 115 PPI. Tick labels shrink to 15 pt at A0. A QR
-code points nowhere. A venue rule is assumed rather than read. And an agent editing a design "live"
-overwrites the version you liked. This skill handles those cases:
+The pre-print review checks what people miss: text too small at print size, blurry figures, a QR
+code that doesn't scan, the venue's size rules, unclear terms, and numbers that disagree.
+Open `REVIEW.md` in a Markdown preview (VS Code: Cmd+Shift+V) to see the crops.
 
-- **Paper fidelity.** Every poster sentence is stored as a wording slot citing the paper line it
-  comes from. A checker verifies traceability and word caps, and every number on the poster is looked
-  up in the paper. A "free wording" mode is available if you ask for it.
-- **Plan before build.** A planner writes an element-level PLAN with measured geometry,
-  space-budget arithmetic and the decisions you still have to make. Nothing is built until you answer
-  them.
-- **Copies only.** Every revision goes on a copy or a new page. Exports go to new folders.
-- **Print resolution.** Figures are exported at 6000 px. The skill computes PPI at the placed size
-  and text size at print scale, and writes a "poster-mode re-plot" prompt for figures whose text is
-  too small.
-- **Non-Latin scripts.** Arabic, Thai, Bengali and CJK sample text is rendered through a
-  browser, because matplotlib cannot shape these scripts.
-- **Pre-print review** of any poster. Five lenses (visitor clarity, print preflight, proofread +
-  fidelity, venue rules, design critique) produce one ranked summary: must fix before print / should
-  fix / nice to have.
-
-### Modes
+<details>
+<summary>All modes</summary>
 
 | Mode | Inputs | Output |
 |---|---|---|
-| **SETUP** | Your Claude app; a Canva account (optional) | Canva connected and verified, or the PPTX route chosen |
-| **PLAN** | The filled-in planning prompt, the current design/file | `specs/<task>-PLAN.md` with open decisions |
-| **BUILD** | A resolved PLAN | A Canva copy (Canva route) or a `.pptx` (PPTX route), exports, check results |
-| **TEXT-EDIT** | A text block + the paper | 2–3 verified, audited rewrites (flow / numbered chain / labelled rows) |
-| **FIGURES** | Figure PDFs/PNGs, placed sizes | Print-resolution PNG/SVG, PPI table, re-plot prompt |
-| **VERIFY/EXPORT** | Design or PDF, wording file, venue size | Wording + claims checks, preflight report |
-| **REVIEW** | Any poster (PDF, Canva link, PPTX, PNG/JPG), the paper, venue rules | `poster_review_<date>/REVIEW.md` (summary + one crop per finding) + `crops/`; lens reports as appendices |
+| **SETUP** | Your Claude app; a Canva account (optional) | Canva connected, or the PowerPoint route chosen |
+| **PLAN** | The planning prompt (below) | `specs/<task>-PLAN.md`, with the decisions left to you |
+| **BUILD** | A finished plan | A Canva copy or a `.pptx`, plus exports and checks |
+| **TEXT-EDIT** | A text block + the paper | 2–3 checked rewrites |
+| **FIGURES** | Figure PDFs/PNGs | Print-resolution images and a re-plot prompt for small text |
+| **VERIFY/EXPORT** | Design or PDF | Wording, numbers and print checks |
+| **REVIEW** | Any poster | `REVIEW.md` + crops |
+
+</details>
 
 ## Installation
 
