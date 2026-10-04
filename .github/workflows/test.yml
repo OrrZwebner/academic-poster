@@ -1,0 +1,32 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.8", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pymupdf python-pptx
+          # optional: enables the QR fixtures and the QR decode check; tests SKIP without it
+          python -m pip install opencv-python-headless || echo "opencv not installed: QR tests will skip"
+      - name: Generate synthetic fixtures
+        run: python tests/make_fixtures.py
+      - name: Run tests
+        # assertions parse the scripts' JSON and compare numerically with explicit tolerances
+        # (PPI 0.1, pt 0.1, mm 0.6, contrast ratio 0.01) - see tests/run_tests.py
+        run: python tests/run_tests.py

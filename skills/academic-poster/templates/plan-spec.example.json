@@ -1,0 +1,25 @@
+{
+ "_comment": "SYNTHETIC example for build_pptx.py. A0 portrait, geometry in design px at 96 per inch (3178 x 4494 px = 84.1 x 118.9 cm). Elements are drawn in order: panels first, then images, then text. Replace every value with your PLAN's.",
+ "page": {"width_cm": 84.1, "height_cm": 118.9, "background": "#ffffff"},
+ "units": "px",
+ "min_pt": 24,
+ "min_ppi": 150,
+ "fonts": {"heading": "Arial", "body": "Arial"},
+ "colors": {"ink": "#222831", "body": "#4a5560", "muted": "#646c78", "panel": "#f3f5f6", "accent": "#127a8a"},
+ "elements": [
+  {"id": "header_rule", "type": "rect", "x": 95, "y": 560, "w": 2988, "h": 6, "fill": "ink"},
+  {"id": "intro_panel", "type": "rounded_rect", "x": 95, "y": 620, "w": 2988, "h": 900, "fill": "panel", "radius": 0.03},
+  {"id": "method_panel", "type": "rounded_rect", "x": 95, "y": 1580, "w": 1460, "h": 1300, "fill": "panel", "radius": 0.03},
+  {"id": "results_panel", "type": "rounded_rect", "x": 1623, "y": 1580, "w": 1460, "h": 1300, "fill": "panel", "radius": 0.03},
+  {"id": "conclusion_bar", "type": "rounded_rect", "x": 95, "y": 2940, "w": 2988, "h": 260, "fill": "ink", "radius": 0.2},
+  {"id": "fig_results", "type": "image", "path": "figs/example_results.png", "x": 1663, "y": 1720, "w": 1380, "fit": "width"},
+  {"id": "title", "type": "text", "x": 95, "y": 120, "w": 2988, "h": 170, "text": "An Example Title: Fewer Parameters, Same Accuracy", "size_px": 120, "bold": true, "color": "ink", "font": "heading"},
+  {"id": "authors", "type": "text", "x": 95, "y": 320, "w": 2988, "h": 70, "text": "A. Author, B. Author", "size_px": 52, "color": "ink"},
+  {"id": "intro_heading", "type": "text", "x": 135, "y": 650, "w": 2900, "h": 100, "text": "Introduction", "size_px": 70, "bold": true, "color": "accent", "font": "heading"},
+  {"id": "intro_text", "type": "text", "x": 135, "y": 780, "w": 2900, "h": 600, "slot": "intro", "size_px": 40, "color": "body"},
+  {"id": "method_heading", "type": "text", "x": 135, "y": 1610, "w": 1400, "h": 100, "text": "Method", "size_px": 70, "bold": true, "color": "accent", "font": "heading"},
+  {"id": "results_heading", "type": "text", "x": 1663, "y": 1610, "w": 1400, "h": 100, "text": "Results", "size_px": 70, "bold": true, "color": "accent", "font": "heading"},
+  {"id": "results_caption", "type": "text", "x": 1663, "y": 2760, "w": 1380, "h": 60, "slot": "results_caption", "size_px": 34, "color": "muted", "align": "center"},
+  {"id": "conclusion", "type": "text", "x": 135, "y": 2960, "w": 2908, "h": 220, "slot": "conclusion", "size_px": 46, "bold": true, "color": "#ffffff", "align": "center", "anchor": "middle"}
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "_comment": "One entry per figure/logo file. media_id is filled after uploading to Canva (Canva route); 'file' is used by build_pptx.py (PPTX route). px = source pixel size, used for aspect ratio (h = w * px_h / px_w) and PPI.",
+ "media": {
+  "fig_results": {
+   "file": "figs/example_results.png",
+   "px": [6000, 3600],
+   "source": "<paper figure file, e.g. figures/results.pdf>",
+   "media_id": "<Canva media ID after upload>",
+   "role": "RQ1 main plot",
+   "min_width_px": 1100
+  },
+  "logo_lab": {
+   "file": "logos/lab_logo.png",
+   "px": [2400, 800],
+   "source": "<official logo file>",
+   "media_id": "<Canva media ID after upload>",
+   "role": "footer logo"
+  }
+ }
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pdf
+*.png
+*.pptx
+*.skill
+*.zip
+.DS_Store
+out/
+review_*/
+tests/fixtures/

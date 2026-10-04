@@ -1,0 +1,9 @@
+{
+  "name": "academic-poster",
+  "version": "0.1.0",
+  "description": "Turn a research paper into a print-ready academic conference poster (built in Canva through the Canva MCP, or as an editable .pptx without Canva), keep every sentence traceable to the paper, and run a five-lens pre-print review on any existing poster.",
+  "author": {
+    "name": "Orr Zwebner"
+  },
+  "keywords": ["poster", "academic-poster", "conference-poster", "canva", "mcp", "research", "pptx", "preflight"]
+}

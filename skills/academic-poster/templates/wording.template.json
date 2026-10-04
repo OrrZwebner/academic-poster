@@ -1,0 +1,32 @@
+{
+ "meta": {
+  "source_path": "<path to paper.tex or paper.pdf - the authoritative source>",
+  "fidelity_mode": "paper-only",
+  "generated": "<YYYY-MM-DD>",
+  "non_paper_exceptions": [
+   {"text": "QR", "where": "label next to the QR code", "approved": "<author, YYYY-MM-DD>", "note": "navigation text"}
+  ]
+ },
+ "slots": {
+  "intro": {
+   "text": "Small models are cheap to run\nbut they lose accuracy on rare classes",
+   "fragments": [
+    {"text": "Small models are cheap to run", "tex_line": 12},
+    {"text": "but they lose accuracy on rare classes", "tex_line": 13}
+   ],
+   "note": "SYNTHETIC example. 'text' must equal the fragments joined; each fragment is a deletion-only edit of the cited line (+/- 1)."
+  },
+  "results_caption": {
+   "text": "Accuracy per model size (mean of 3 seeds)",
+   "fragments": [],
+   "short": {"text": "Accuracy per model size (mean of 3 seeds)", "tex_lines": [41]},
+   "limit": 12,
+   "note": "SYNTHETIC example of a light edit: 'short' is a summary in the paper's terms; it must cite its source lines and stay under 'limit' words. Rejected variants are recorded here."
+  },
+  "conclusion": {
+   "text": "Pruning 40% of the parameters keeps accuracy within 1 point",
+   "fragments": [{"text": "Pruning 40% of the parameters keeps accuracy within 1 point", "tex_line": 88}],
+   "note": "SYNTHETIC example."
+  }
+ }
+}

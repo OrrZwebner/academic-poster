@@ -1,0 +1,14 @@
+{
+  "name": "academic-poster",
+  "owner": {
+    "name": "Orr Zwebner"
+  },
+  "plugins": [
+    {
+      "name": "academic-poster",
+      "description": "Research paper to conference poster (Canva MCP or PPTX) with paper-faithful wording and a five-lens pre-print review.",
+      "source": "./",
+      "strict": true
+    }
+  ]
+}
