@@ -10,5 +10,8 @@
       "source": "./",
       "strict": true
     }
-  ]
+  ],
+  "metadata": {
+    "description": "Marketplace for the academic-poster plugin: research paper to conference poster with a five-lens pre-print review."
+  }
 }
